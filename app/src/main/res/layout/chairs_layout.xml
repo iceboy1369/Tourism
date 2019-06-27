@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/title_mini"
+                android:textStyle="bold"
+                style="@style/TextBold"
+                android:gravity="center"
+                android:text="لطفا جایگاه و صندلی خود را انتخاب کنید"
+                android:textColor="@color/colorPrimary"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chairs_recyclerView"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="125dp">
+
+    <RelativeLayout
+            android:id="@+id/li_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/TransparentBlack3"
+            android:layout_marginRight="110dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+            android:layout_below="@+id/li_line"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="95dp"
+            android:layout_marginEnd="95dp"
+            android:layout_marginBottom="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TransparentBlack"
+                android:textSize="@dimen/title_mini"
+                android:textStyle="bold"
+                android:gravity="right"
+                style="@style/TextBold"
+                android:layout_margin="5dp"
+                android:hint="title"
+                android:text="عنوان"/>
+
+        <icegroup.textviewjustify.TextViewJustify
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/TransparentBlack3"
+                android:textSize="@dimen/title_micro"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:maxLines="3"
+                android:hint="description"
+                android:text="توضیحات"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_img"
+            android:layout_below="@+id/li_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="3dp">
+
+        <RelativeLayout
+                android:layout_width="85dp"
+                android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/login_background"
+                    android:scaleType="centerCrop"/>
+
+            <com.tuyenmonkey.mkloader.MKLoader
+                    android:id="@+id/mk_loading"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    app:mk_color="@color/TransparentBlack"
+                    app:mk_type="Whirlpool"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/li_line"
+            android:layout_toLeftOf="@+id/cv_img"
+            android:layout_toStartOf="@+id/cv_img"
+            android:layout_marginRight="-68dp"
+            android:layout_marginEnd="-68dp"
+            android:layout_marginTop="14dp"
+            android:clickable="false"
+            android:rating="3"
+            android:stepSize="1"
+            android:numStars="5"
+            android:isIndicator="true"
+            android:progressTint="@color/gold"
+            android:scaleY="0.4"
+            android:scaleX="0.4"/>
+
+</RelativeLayout>

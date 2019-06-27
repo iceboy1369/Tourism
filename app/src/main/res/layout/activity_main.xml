@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".activities.MainActivity">
+
+     <RelativeLayout
+            android:id="@+id/li_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+
+        <LinearLayout
+                android:id="@+id/user_prof"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:id="@+id/txt_day_choose_action_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/title_medium"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    style="@style/TextBold"
+                    android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/menu"
+                    android:padding="4dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+     <androidx.coordinatorlayout.widget.CoordinatorLayout
+             android:layout_below="@+id/li_action_bar"
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/main_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/main.collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                    app:contentScrim="@color/colorAccent"
+                    app:expandedTitleMarginStart="48dp"
+                    app:expandedTitleMarginEnd="64dp">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_collapseMode="parallax"
+                        android:fitsSystemWindows="true">
+
+                    <com.ouattararomuald.slider.ImageSlider
+                            android:id="@+id/image_slider"
+                            android:layout_width="match_parent"
+                            app:slideTransitionInterval="3000"
+                            app:indicatorSnap="true"
+                            app:indicatorStrokeColor="@color/black"
+                            app:indicatorPageColor="@color/white"
+                            app:indicatorFillColor="@color/black"
+                            app:indicatorsBottomMargin="27dp"
+                            android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"
+                app:behavior_overlapTop="20dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/serviceRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+            android:id="@+id/li_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/TransparentBlack3"
+            android:visibility="gone"
+            android:focusable="true"
+            android:clickable="true">
+
+        <com.tuyenmonkey.mkloader.MKLoader
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:mk_type="Whirlpool"
+                app:mk_color="@color/black"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/no_internet"/>
+
+</RelativeLayout>

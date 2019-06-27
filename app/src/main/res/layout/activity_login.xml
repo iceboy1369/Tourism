@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/login_background"
+            android:tint="@color/colorPrimaryDarkTint"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            app:srcCompat="@color/white_material"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.35">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:text="ورود به حساب کاربری"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                style="@style/TextBold"
+                android:textSize="@dimen/title_xlarge"
+                android:layout_marginBottom="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.65">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_inputs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="1dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/txt_Username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toLeftOf="@+id/img1"
+                            android:layout_toStartOf="@+id/img1"
+                            android:gravity="center_vertical|right"
+                            android:background="@android:color/transparent"
+                            android:hint="نام کاربری"
+                            android:text="0123456789"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TransparentBlack" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/img1"
+                            android:layout_toStartOf="@+id/img1"
+                            android:layout_below="@+id/txt_Username"
+                            android:background="@color/TransparentBlack"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/mobile" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/txt_Password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toLeftOf="@+id/img2"
+                            android:layout_toStartOf="@+id/img2"
+                            android:gravity="center_vertical|right"
+                            android:background="@android:color/transparent"
+                            android:inputType="textPassword"
+                            android:hint="رمز عبور"
+                            android:text="sana24"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TransparentBlack" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/img2"
+                            android:layout_toStartOf="@+id/img2"
+                            android:layout_below="@+id/txt_Password"
+                            android:background="@color/TransparentBlack"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/password" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_above="@+id/li_btn"
+                android:id="@+id/txt_forget_pass"
+                android:layout_marginBottom="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="رمز خود را فراموش کرده اید؟"
+                    android:textColor="@color/TransparentBlack"
+                    android:textSize="@dimen/title_mini"
+                    android:textStyle="bold"
+                    style="@style/TextBold"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/li_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/colorPrimary"
+                        android:id="@+id/btn_login" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/login_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:indeterminate="true"
+                            android:theme="@style/AppTheme.WhiteAccent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="ورود"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/title_large"
+                        android:textStyle="bold"
+                        style="@style/TextBold"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

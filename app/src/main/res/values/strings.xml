@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">گردشگری</string>
+    <string name="myFont">fonts/IRANSansMobile_Light.ttf</string>
+    <string name="myFont_bold">fonts/IRANSansMobile_Bold.ttf</string>
+
+    <string name="message_login_password_error">لطفا رمز عبور را وارد کنید</string>
+    <string name="message_login_username_error">لطفا نام کاربری خود را وارد کنید</string>
+
+</resources>

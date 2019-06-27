@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_xxlarge">22sp</dimen>
+    <dimen name="title_xlarge">18sp</dimen>
+    <dimen name="title_large">14sp</dimen>
+    <dimen name="title_medium">12sp</dimen>
+    <dimen name="title_mini">10sp</dimen>
+    <dimen name="title_micro">8sp</dimen>
+
+    <dimen name="main_items_width_height">55dp</dimen>
+
+    <dimen name="text_drawable_size">16sp</dimen>
+    <dimen name="text_drawable_size_top_padding">3dp</dimen>
+
+</resources>
